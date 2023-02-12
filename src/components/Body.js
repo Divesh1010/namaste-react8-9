@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import Fooditem from "./fooditem";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { GET_RESTAURANTS_URL } from "../../config";
@@ -47,7 +47,7 @@ const Body = () => {
           {filteredRestaurants.map((item) => {
             return (
               <Link key={item.data.id} to={`/restaurant/${item.data.id}`}>
-                <RestaurantCard {...item.data} />
+                <Fooditem {...item.data} />
               </Link>
             );
           })}

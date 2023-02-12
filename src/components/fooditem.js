@@ -1,10 +1,11 @@
-const RestaurantCard = ({
+const Fooditem = ({
   name,
+  description,
   avgRating,
   cloudinaryImageId,
   costForTwoString,
+  price,
 }) => {
-  //   console.log(props);
   return (
     <div className="card">
       <img
@@ -19,8 +20,10 @@ const RestaurantCard = ({
       <h2> {name} </h2>
       <h2> {costForTwoString} </h2>
       <h2> {avgRating} </h2>
+      <h2> {description} </h2>
+      <h2> Rupees {price / 100} </h2>
     </div>
   );
 };
 
-export default RestaurantCard;
+export default Fooditem;
